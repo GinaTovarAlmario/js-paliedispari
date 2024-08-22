@@ -20,9 +20,13 @@ const resultElement = document.getElementById('result');
 const givenWord = prompt('Inserisci una parola per sapere se è palindorma:','ingegni').trim();
 // FASE DI ELABORAZIONE DATI
 let finalWord = reverseWord(givenWord);
+const notPalindromeMessage = 'La parola inserita non è palindroma';
+const palindromeMessage = 'La parola inserita è palindroma';
+const message = (finalWord === givenWord) ? palindromeMessage : notPalindromeMessage;
+
 // FASE DI OUTPUT
-console.log(finalWord);
-resultElement.innerHTML = `Parola inserita ${givenWord} e parola invertita ${finalWord}`;
+console.log(message);
+resultElement.innerHTML = `${message}.<br>Parola inserita ${givenWord} e parola invertita ${finalWord}`;
 
 
 /*ESERCIZIO 2 : Pari e Dispari
