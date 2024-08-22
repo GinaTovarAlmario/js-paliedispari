@@ -41,9 +41,9 @@ usare il più possibile il DOM, sia per raccogliere i dati che per stampare il r
 /**
  * 1- mi preparo gli elementi che mi serviranno e li prendo dal DOM
  * 2- prendo i valori inseriti dall'utente e li salvo in delle variabili
- * 3- genero un numero random da 1 5 per la giocat del pc
+ * 3- genero un numero random da 1 5 per la giocat del pc con una funzione
  * 4- sommo i due numeri
- * 5-controllo se la somma dei due numeri è dispari o pari
+ * 5-controllo se la somma dei due numeri è dispari o pari con una funzione
  * 6- stabilisco il vincitore in base alla rsiposta iniziale dell'utente 
  *
  */
@@ -61,13 +61,20 @@ form.addEventListener('submit', function(e){
     const userChoice = (choiceField.value).trim();
     const userNumber = parseInt(numberField.value);
 
-    console.log('scelta utente: ', userChoice);
-    console.log('numero scelto da utente da 1 a 5 : ', userNumber);
+    console.log('scelta utente: ',userChoice);
+    console.log('numero scelto da utente da 1 a 5 : ',userNumber);
 
     // ora mi serve un numero random per il pc
     let pcNumber = getRandomNumber(1,5);
-    console.log('Il numero da 1 a 5 generato per il pc è : ', pcNumber);
+    console.log('Il numero da 1 a 5 generato per il pc è : ',pcNumber);
     // ora devo fare la somma dei due numeri
     let sum = userNumber + pcNumber;
-    console.log('La somma del numero utente e numero del pc è :', sum);
-})
+    console.log('La somma del numero utente e numero del pc è :',sum);
+    // ora devo controlla se il risultato della somma è pari o dispari
+    let resultOperation = isEven(sum);
+    console.log('Fine gioco : ', resultOperation);
+
+    let resultChoice = (userChoice === resultOperation) ? 'Ha vinto utente' : 'Ha vinto il PC!';
+    resultPlayElement.innerHTML = `Numero scelto da Utente : ${userNumber}.<br> Numero pescato per il PC: ${pcNumber}.<br>
+    La somma dei due numeri dati è ${sum}.<br> Risulato del gioco ${resultChoice}`;
+});

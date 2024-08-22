@@ -37,12 +37,7 @@ function getRandomNumber (min, max){
 3-ho bisogno di restituire un valore? si la parola al contrario
 4-se si , di che tipo? sarà una stringa
 */
-
-
-// fumzione dispari
-/*
-1-come la chiamo?
-2-ho bisogno di un parametro? si, la parola data da utente
-3-ho bisogno di restituire un valore? si la parola al contrario
-4-se si , di che tipo? sarà una stringa
-*/
+function isEven(num){
+    const resultNum = (num % 2 === 0) ? 'Il risultato è pari!' : 'Il risultato è dispari!';
+    return resultNum;
+}
