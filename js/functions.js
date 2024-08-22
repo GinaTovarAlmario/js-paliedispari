@@ -20,6 +20,16 @@ function reverseWord(word){
     return revWord;
 }
 // SECONDO ESERCIZIO
+// funzione per generare numeri random con un minimo e un massimo
+/*
+1-come la chiamo?
+2-ho bisogno di un parametro? si, la parola data da utente
+3-ho bisogno di restituire un valore? si la parola al contrario
+4-se si , di che tipo? sarà una stringa
+*/
+function getRandomNumber (min, max){
+    return Math.floor( Math.random()* (max - min +1) + 1);
+}
 // funzione pari
 /*
 1-come la chiamo?
@@ -30,3 +40,9 @@ function reverseWord(word){
 
 
 // fumzione dispari
+/*
+1-come la chiamo?
+2-ho bisogno di un parametro? si, la parola data da utente
+3-ho bisogno di restituire un valore? si la parola al contrario
+4-se si , di che tipo? sarà una stringa
+*/

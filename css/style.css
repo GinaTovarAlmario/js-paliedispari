@@ -11,7 +11,7 @@
 }
 .es1{ 
     font-size: 20px;
-    background-color: goldenrod;
+    background-color: lightcoral;
     text-align: center;
 }
 .es2 {
@@ -22,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 .h-200{
     height: 200px;

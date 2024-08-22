@@ -37,3 +37,34 @@ Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 Dichiariamo chi ha vinto.
 BONUS
 usare il più possibile il DOM, sia per raccogliere i dati che per stampare il risultato */
+
+/**
+ * 1- mi preparo gli elementi che mi serviranno e li prendo dal DOM
+ * 2- prendo i valori inseriti dall'utente e li salvo in delle variabili
+ * 3- genero un numero random da 1 5 per la giocat del pc
+ * 4- sommo i due numeri
+ * 5-controllo se la somma dei due numeri è dispari o pari
+ * 6- stabilisco il vincitore in base alla rsiposta iniziale dell'utente 
+ *
+ */
+// FASE DI PREPARAZIONE
+ const form = document.querySelector('form');
+ const choiceField = document.getElementById('choice');
+ const numberField = document.getElementById('number');
+ const resultPlayElement = document. getElementById('play');
+
+//EVENTO
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+// FASE DI RACCOLTA DATI
+    const userChoice = (choiceField.value).trim();
+    const userNumber = parseInt(numberField.value);
+
+    console.log('scelta utente: ', userChoice);
+    console.log('numero scelto da utente da 1 a 5 : ', userNumber);
+
+    // ora mi serve un numero random per il pc
+    let pcNumber = getRandomNumber(1,5);
+    console.log('Il numero da 1 a 5 generato per il pc è : ', pcNumber);
+})
