@@ -1,0 +1,31 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* utilities */
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.es1{ 
+    justify-content: center;
+    background-color: goldenrod;
+}
+.es2 {
+    justify-content: center;
+    background-color: lavender
+}
+.h-200{
+    height: 200px;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.d-flex{
+    display: flex;
+}
