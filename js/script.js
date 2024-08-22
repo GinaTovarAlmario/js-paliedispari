@@ -7,7 +7,7 @@ window.addEventListener("load", (event) => {
 /** ESRCIZIO 1 : Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
-1- Mi seevirà una variabile in cui inserire la parola data dall'utente
+1- Mi servirà una variabile in cui inserire la parola data dall'utente
 2- mi servirà prendere il mio elmento dal DOM per stampare in pagina il risultato (se voglio farlo alla fine dell'esercizio)
 3-chiedo all'utente di inserire una parola
 4- prendo la parola data dall'utente la salvo in una variabile
@@ -16,24 +16,13 @@ prendo la mia parola la inverto e vedo se invertita è uguale alla parola data d
 
 // FASE DI PREPARAZIONE
 const resultElement = document.getElementById('result');
-
-
 // FASE DI RACCOLTA DATI
-
+const givenWord = prompt('Inserisci una parola per sapere se è palindorma:','ingegni').trim();
 // FASE DI ELABORAZIONE DATI
-
+let finalWord = reverseWord(givenWord);
 // FASE DI OUTPUT
-
-
-
-
-
-
-
-
-
-
-
+console.log(finalWord);
+resultElement.innerHTML = `Parola inserita ${givenWord} e parola invertita ${finalWord}`;
 
 
 /*ESERCIZIO 2 : Pari e Dispari
