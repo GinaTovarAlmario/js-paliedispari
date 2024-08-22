@@ -67,4 +67,7 @@ form.addEventListener('submit', function(e){
     // ora mi serve un numero random per il pc
     let pcNumber = getRandomNumber(1,5);
     console.log('Il numero da 1 a 5 generato per il pc è : ', pcNumber);
+    // ora devo fare la somma dei due numeri
+    let sum = userNumber + pcNumber;
+    console.log('La somma del numero utente e numero del pc è :', sum);
 })
